@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://xlvp0nw0r85n"]
+
+[ext_resource type="Script" uid="uid://bnma4ny7hme31" path="res://Scripts/panel.gd" id="1_tt5f1"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_tt5f1")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Titre" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 69
+text = "Project  //GP//"
+
+[node name="Version" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 25
+text = "Build 3.0"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -573.0
+offset_top = -137.0
+offset_right = -123.0
+offset_bottom = 228.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NewGame" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "New Game"
+
+[node name="Settings" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+
+[node name="News" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme_override_font_sizes/font_size = 30
+text = "Patch Notes"
+
+[connection signal="pressed" from="Panel/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/News" to="." method="_on_news_pressed"]

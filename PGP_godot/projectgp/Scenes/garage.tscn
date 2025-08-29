@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdtgkvw1k0phb"]
+[gd_scene load_steps=6 format=3 uid="uid://bdtgkvw1k0phb"]
 
 [ext_resource type="PackedScene" uid="uid://cqqy4huhq851r" path="res://Scenes/player.tscn" id="1_rao6x"]
 [ext_resource type="PackedScene" uid="uid://65imluhs6mkj" path="res://Scenes/computer.tscn" id="2_r13b6"]
 [ext_resource type="PackedScene" uid="uid://cgs66gq0mwhvw" path="res://Scenes/ComputerUI.tscn" id="3_mjmn4"]
+[ext_resource type="PackedScene" uid="uid://bacewvxursi2i" path="res://Scenes/PauseMenu.tscn" id="4_jc3d8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1y551"]
 size = Vector3(20, 0.2, 20)
@@ -19,8 +20,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.6, 2)
 
 [node name="SunLight" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 0, 0)
-light_energy = 1.5
+transform = Transform3D(0.866025, -0.231648, 0.443102, 0, 0.886203, 0.463296, -0.5, -0.401226, 0.767475, 0, 0, 0)
+light_energy = 1.348
 shadow_enabled = true
+shadow_normal_bias = 8.619
+shadow_blur = 0.985
 
 [node name="ComputerUI" parent="." instance=ExtResource("3_mjmn4")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_jc3d8")]

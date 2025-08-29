@@ -1,18 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgs66gq0mwhvw"]
+[gd_scene load_steps=6 format=3 uid="uid://cgs66gq0mwhvw"]
 
 [ext_resource type="Script" uid="uid://dkykjlwpr3xua" path="res://Scripts/computer_ui.gd" id="1_ixny2"]
 
 [sub_resource type="Theme" id="Theme_fvcua"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhm3r"]
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g73r"]
+bg_color = Color(0.295867, 0.295866, 0.295867, 1)
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yv5cf"]
+bg_color = Color(0.242966, 0.242966, 0.242966, 1)
+corner_radius_top_right = 15
+
 [node name="ComputerUI" type="CanvasLayer"]
 script = ExtResource("1_ixny2")
 
 [node name="MainPanel" type="Panel" parent="."]
-offset_left = 400.0
-offset_top = 200.0
-offset_right = 800.0
-offset_bottom = 500.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
 theme = SubResource("Theme_fvcua")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vhm3r")
 
 [node name="Label" type="Label" parent="MainPanel"]
 layout_mode = 0
@@ -20,14 +39,20 @@ offset_left = 50.0
 offset_top = 40.0
 offset_right = 350.0
 offset_bottom = 80.0
+theme_override_font_sizes/font_size = 30
 text = "Bienvenue sur l’ordinateur"
 
 [node name="Button" type="Button" parent="MainPanel"]
-layout_mode = 0
-offset_left = 150.0
-offset_top = 220.0
-offset_right = 250.0
-offset_bottom = 260.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1050.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -530.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_4g73r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yv5cf")
 text = "Fermer
 "
 

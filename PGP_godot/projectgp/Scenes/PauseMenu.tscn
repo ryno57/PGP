@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://bacewvxursi2i"]
+
+[ext_resource type="Script" uid="uid://co2k52ity0ibv" path="res://Scripts/pause_menu.gd" id="1_lj4oq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj4oq"]
+bg_color = Color(0.325441, 0.325441, 0.325441, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.131379, 0.131379, 0.131379, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 10
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxrls"]
+bg_color = Color(0.242966, 0.242966, 0.242966, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwhev"]
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_siy43"]
+bg_color = Color(0.242966, 0.242966, 0.242966, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w4ur"]
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqxqw"]
+bg_color = Color(0.242966, 0.242966, 0.242966, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey1tb"]
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 10
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_lj4oq")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 375.0
+offset_top = 50.0
+offset_right = -375.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lj4oq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = -80.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Continue" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwhev")
+action_mode = 0
+text = "Resume
+"
+
+[node name="BTMain" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5w4ur")
+action_mode = 0
+text = "Back to main menu
+"
+
+[node name="Leave" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_gqxqw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey1tb")
+action_mode = 0
+text = "Leave the game
+"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/BTMain" to="." method="_on_bt_main_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Leave" to="." method="_on_leave_pressed"]

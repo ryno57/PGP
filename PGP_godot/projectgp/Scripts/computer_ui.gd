@@ -15,3 +15,6 @@ func hide_ui():
 
 func _on_button_pressed():
 	hide_ui()
+
+func is_open() -> bool:
+	return visible
