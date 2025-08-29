@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://65imluhs6mkj"]
+[gd_scene load_steps=5 format=3 uid="uid://65imluhs6mkj"]
+
+[ext_resource type="Script" uid="uid://cvcj1eqlkruvu" path="res://computer.gd" id="1_gxl5a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gxl5a"]
 size = Vector3(1, 1, 0.5)
@@ -10,6 +12,7 @@ size = Vector3(1, 1, 0.5)
 albedo_color = Color(0.510972, 0.576413, 0.820692, 1)
 
 [node name="computer" type="StaticBody3D"]
+script = ExtResource("1_gxl5a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_gxl5a")

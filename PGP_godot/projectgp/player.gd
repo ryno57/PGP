@@ -28,7 +28,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):
-	if Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding():
-		var target = $RayCast3D.get_collider()
+	var raycast := $Camera3D/RayCast3D
+	if Input.is_action_just_pressed("interact") and raycast and raycast.is_colliding():
+		var target = raycast.get_collider()
 		if target.has_method("on_interact"):
 			target.call("on_interact")

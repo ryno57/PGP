@@ -1,5 +1,4 @@
-extends Node3D
+extends StaticBody3D
 
 func on_interact():
-	print("Interaction ordi")
-	# Plus tard : afficher une UI, charger des données, etc.
+	print("Interaction avec l'ordinateur !")
