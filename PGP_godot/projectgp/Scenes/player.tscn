@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqqy4huhq851r"]
 
-[ext_resource type="Script" uid="uid://hgt761crdip7" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://hgt761crdip7" path="res://Scripts/player.gd" id="1_4flbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 radius = 0.3
@@ -19,4 +19,4 @@ current = true
 fov = 77.6
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-target_position = Vector3(0, 0, -2)
+target_position = Vector3(0, 0, -3)

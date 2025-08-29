@@ -17,7 +17,7 @@ func _unhandled_input(event):
 		camera.rotation_degrees.x -= event.relative.y * mouse_sensitivity
 		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -80, 80)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var input_dir = Vector3.ZERO
 	input_dir.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	input_dir.z = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
@@ -27,7 +27,7 @@ func _physics_process(delta):
 	velocity.z = input_dir.z * speed
 	move_and_slide()
 
-func _process(delta):
+func _process(_delta):
 	var raycast := $Camera3D/RayCast3D
 	if Input.is_action_just_pressed("interact") and raycast and raycast.is_colliding():
 		var target = raycast.get_collider()
