@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://xlvp0nw0r85n"]
 
-[ext_resource type="Script" uid="uid://bnma4ny7hme31" path="res://Scripts/panel.gd" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://bnma4ny7hme31" path="res://Scripts/MainMenu.gd" id="1_tt5f1"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_tt5f1")
@@ -10,7 +10,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Titre" type="Label" parent="Panel"]
+[node name="Title" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -22,7 +22,7 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 69
 text = "Project  //GP//"
 
-[node name="Version" type="Label" parent="Panel"]
+[node name="Build" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -30,8 +30,25 @@ offset_top = 20.0
 offset_right = -20.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 25
-text = "Build 3.0"
+text = "Build 3.1"
 horizontal_alignment = 2
+
+[node name="Author" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -89.0
+offset_right = -12.0
+offset_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Programs : Lothevy
+Designs : Lothevy
+Engine : Godot 4.4.1"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -43,7 +60,7 @@ anchor_bottom = 0.5
 offset_left = -573.0
 offset_top = -137.0
 offset_right = -123.0
-offset_bottom = 228.0
+offset_bottom = 272.0
 theme_override_constants/separation = 20
 alignment = 1
 
@@ -64,8 +81,17 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
 theme_override_font_sizes/font_size = 30
+disabled = true
 text = "Patch Notes"
+
+[node name="Leave" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme_override_font_sizes/font_size = 25
+text = "Quit to desktop"
 
 [connection signal="pressed" from="Panel/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/News" to="." method="_on_news_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
