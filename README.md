@@ -22,28 +22,12 @@ You’ll build your own racing team, manage riders and staff, navigate global ev
 
 ## Current Development Status
 
-As of **August 30, 2025**, I’m actively working on **Build 3.1**.  
+As of **August 30, 2025**, I’m actively working on **Build 3.2**.  
 This version focuses on polishing the core experience and laying visual foundations.
 
-### Build 3.1 Goals:
--  Restyling all UI elements and menus
+### Build 3.2 Goals:
+-  Restyling all UI elements and menus (again)
 -  Visual overhaul of the Garage Map *(currently just a white floor and a blue cube)*
-
----
-
-## 📅 2025 Roadmap
-
-Here’s what I plan to tackle next:
-
--  Add basic settings to the main menu:
-  - Resolution
-  - Window mode (fullscreen/borderless)
-  - VSync toggle
-  - FPS cap
--  Begin modeling the garage:
-  - Add walls, basic textures, a table, and a proper PC setup
--  Start building the in-game computer interface:
-  - A “cheap Windows-style” desktop with apps and interactions
 
 ---
 
