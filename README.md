@@ -25,13 +25,14 @@ You’ll build your own racing team, manage riders and staff, navigate global ev
 As of **August 30, 2025**, I’m actively working on **Build 3.2**.  
 This version focuses on polishing the core experience and laying visual foundations.
 
-### Build 3.2 Goals:
+### Build 3.x Goals:
 -  Restyling all UI elements and menus (again)
 -  Visual overhaul of the Garage Map *(currently just a white floor and a blue cube)*
+-  Tweaking some graphics
 
 ---
 
 ##  Stay tuned
 
 I’ll be updating this repo regularly as I learn and build.  
-Thanks for checking out my project — and feel free to follow along or drop feedback!
+Thanks for checking out my project and feel free to follow along or drop feedback!
